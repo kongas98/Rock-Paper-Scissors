@@ -98,14 +98,14 @@ def match():
 
 # Function to print the current score.
 def Current_Score(user_wins, pc_wins):
-    print("Current Score-->\tYou - " + str(user_wins) + "\tPC - " + str(pc_wins))
+    print(f"Current Score-->\tYou - {user_wins} \tPC - {pc_wins}")
 
 # Function to log game data for each round.
 def Game_Data(History, user, pc, round, user_wins, pc_wins):
-    History.append("-----Round " + str(round) + "-----")
-    History.append("|" + "Player: " + str(user) + "|")
-    History.append("|" + "Computer: " + str(pc) + "|")
-    History.append("|" + "Score: " + str(user_wins) + "-" + str(pc_wins) + "|")
+    History.append(f"-----Round {round}-----")
+    History.append(f"| Player: {user}|")
+    History.append(f"| Computer: {pc}|")
+    History.append(f"| Score: {user_wins}-{pc_wins}|")
     # Check if either the user or the PC has won 3 rounds to end the game.
     if user_wins == 3 or pc_wins == 3:
         End_Game(History)
